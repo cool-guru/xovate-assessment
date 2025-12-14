@@ -1,0 +1,167 @@
+:root {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #0f172a;
+  background-color: #f5f6fa;
+}
+
+.page {
+  min-height: 100vh;
+  padding: 2rem;
+  background: radial-gradient(circle at top, #ffffff, #eef2ff 70%);
+}
+
+.panel {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+header h1 {
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  margin-bottom: 0.5rem;
+}
+
+header .lede {
+  color: #475569;
+  max-width: 640px;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.75rem;
+  color: #6366f1;
+  margin-bottom: 0.75rem;
+}
+
+.card {
+  background: #fff;
+  border-radius: 1rem;
+  padding: 1.75rem;
+  box-shadow: 0 10px 40px rgba(15, 23, 42, 0.08);
+}
+
+.upload-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+.file-picker {
+  flex: 1;
+  border: 2px dashed #6366f133;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  min-width: 240px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  color: #475569;
+}
+
+.file-picker:hover {
+  border-color: #818cf8;
+}
+
+.file-picker input {
+  display: none;
+}
+
+button {
+  background: #4f46e5;
+  color: #fff;
+  border: none;
+  border-radius: 0.75rem;
+  padding: 0.85rem 1.75rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.hint {
+  font-size: 0.9rem;
+  color: #475569;
+  margin-top: 0.75rem;
+}
+
+.result-summary {
+  display: inline-flex;
+  gap: 0.75rem;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  border-radius: 999px;
+  background: #f1f5f9;
+}
+
+.result-summary[data-status="pass"] {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.result-summary[data-status="fail"] {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.error-banner,
+.success-banner {
+  margin-top: 1rem;
+  padding: 0.85rem 1rem;
+  border-radius: 0.75rem;
+}
+
+.error-banner {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.success-banner {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  margin-top: 1rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th,
+table td {
+  text-align: left;
+  padding: 0.75rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+table th {
+  background: #f8fafc;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #475569;
+}
+
+table td {
+  font-size: 0.95rem;
+}
+
+@media (max-width: 640px) {
+  .upload-form {
+    flex-direction: column;
+  }
+
+  button {
+    width: 100%;
+  }
+}

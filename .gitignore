@@ -1,0 +1,19 @@
+.DS_Store
+__pycache__/
+*.pyc
+.venv/
+venv/
+env/
+frontend/node_modules/
+frontend/dist/
+
+# FastAPI/UVicorn logs
+*.log
+
+# Local data or uploads
+*.csv
+!test_data_clean.csv
+!test_data_dirty.csv
+
+# Docker junk
+*.pid
